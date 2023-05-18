@@ -6,7 +6,7 @@ const AllToys = () => {
 
 
     useEffect(() => {
-        fetch("https://toy-house-server.vercel.app/allToys")
+        fetch("https://toy-house-server-a2n426.vercel.app/allToys")
             .then(res => res.json())
             .then(data => {
                 setToys(data)
