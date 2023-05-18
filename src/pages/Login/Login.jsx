@@ -1,5 +1,5 @@
 import { Button, Label, TextInput } from "flowbite-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
 import { useContext, useState } from "react";
 import { UserContext } from "../../providers/AuthProviders";
@@ -8,6 +8,10 @@ const Login = () => {
     const { logIn, googleLogIn } = useContext(UserContext);
     const [success, setSuccess] = useState("")
     const [err, setErr] = useState("")
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+    console.log("from login", from)
 
     const handleLogIn = event => {
         event.preventDefault();
@@ -19,10 +23,11 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         logIn(email, password)
-            .then(result => {
-                const createdUser = result.user;
-                console.log(createdUser);
+            .then(() => {
+                // const createdUser = result.user;
                 setSuccess("successfully login")
+                navigate(from, { replace: true })
+
             })
             .catch(err => {
                 setErr(err.message)
@@ -32,6 +37,7 @@ const Login = () => {
         googleLogIn()
             .then(() => {
                 setSuccess("success log in with google")
+                navigate(from, { replace: true })
             })
             .catch(err => {
                 setErr(err.message)

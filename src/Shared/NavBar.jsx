@@ -1,6 +1,6 @@
 import { Navbar } from "flowbite-react";
 import { useContext, } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { UserContext } from "../providers/AuthProviders";
 
 const NavBar = () => {
@@ -9,10 +9,9 @@ const NavBar = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => { })
-            .catch((err) => console.log(err.message))
+            .catch(() => { })
     }
 
-    console.log(user);
 
     return (
         <div>
@@ -37,10 +36,10 @@ const NavBar = () => {
                             <div className='relative group lg:flex'>
                                 <img className="rounded-full w-14" src={user?.photoURL} alt="Not Found" />
                                 <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md top-0 right-1 absolute
-                        -translate-x-14 lg:translate-y-2 opacity-0 m-4 mx-auto">{user?.displayName}</span>
+                        -translate-x-14 -translate-y-4  opacity-0 m-4 mx-auto">{user?.displayName}</span>
                             </div>
                             :
-                            <NavLink to="/login">Login</NavLink>
+                            <NavLink className="font-semibold" to="/login">Login</NavLink>
                     }
                     <Navbar.Toggle />
                 </div>
@@ -51,13 +50,13 @@ const NavBar = () => {
                     <NavLink to="/AllToys">
                         All Toys
                     </NavLink>
-                    <NavLink to="/login">
+                    <NavLink to="/myToys">
                         My Toys
                     </NavLink>
-                    <NavLink to="/login">
+                    <NavLink to="/addToys">
                         Add A Toy
                     </NavLink>
-                    <NavLink to="/login">
+                    <NavLink to="/blogs">
                         Blogs
                     </NavLink>
                     {

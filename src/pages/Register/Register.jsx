@@ -4,42 +4,42 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../../providers/AuthProviders";
 
 const Register = () => {
-    const [success,setSuccess]=useState("")
-    const [err,setErr]=useState("")
+    const [success, setSuccess] = useState("")
+    const [err, setErr] = useState("")
 
-    const {register}=useContext(UserContext);
+    const { register, changeProfile } = useContext(UserContext);
 
-    const handleRegister = event =>{
+    const handleRegister = event => {
         event.preventDefault();
 
         setSuccess("");
         setErr("");
         const form = event.target;
 
-        
+
 
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
 
-        if(!/(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)){
+        if (!/(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
             return setErr("Password Minimum eight characters, at least one letter and one number")
         }
 
-        if(!/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(email)){
+        if (!/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(email)) {
             return setErr("Please Provide valid email")
         }
 
-        register(email,password)
-        .then(result =>{
-            const createdUser = result.user;
-            console.log(createdUser);
-            setSuccess("Successfully Created")
-        })
-        .catch(err=>{
-            setErr(err.message)
-        })
+        register(email, password)
+            .then(result => {
+                const createdUser = result.user;
+                changeProfile(createdUser, name, photo)
+                setSuccess("Successfully Created")
+            })
+            .catch(err => {
+                setErr(err.message)
+            })
     }
     return (
         <div>
