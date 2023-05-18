@@ -25,21 +25,21 @@ const AddToys = () => {
 
         const newToy = { photo, name, category, seller, sellerEmail, price, rating, available_quantity, description }
 
-        fetch("https://toy-house-server-a2n426.vercel.app/allToys", {
+        //  https://toy-house-server.vercel.app
+        fetch("https://toy-house-server.vercel.app/allToys", {
             method: "POST",
             headers: {
-                "Content-type": "application/json"
+                "Content-type": "application/json",
+                
             },
             body: JSON.stringify(newToy)
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                console.log(data);
             })
+
     }
-
-
-
 
     const options1 = [
         { value: '', text: 'Choose Product Rating' },
