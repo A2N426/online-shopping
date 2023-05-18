@@ -1,7 +1,19 @@
 import { Navbar } from "flowbite-react";
-import { NavLink } from "react-router-dom";
+import { useContext, } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { UserContext } from "../providers/AuthProviders";
 
 const NavBar = () => {
+    const { user, logOut, } = useContext(UserContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch((err) => console.log(err.message))
+    }
+
+    console.log(user);
+
     return (
         <div>
             <Navbar
@@ -19,14 +31,24 @@ const NavBar = () => {
                     </span>
                 </Navbar.Brand>
                 <div className="flex md:order-2">
-                    <h1>Profile</h1>
+
+                    {
+                        user ?
+                            <div className='relative group lg:flex'>
+                                <img className="rounded-full w-14" src={user?.photoURL} alt="Not Found" />
+                                <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md top-0 right-1 absolute
+                        -translate-x-14 lg:translate-y-2 opacity-0 m-4 mx-auto">{user?.displayName}</span>
+                            </div>
+                            :
+                            <NavLink to="/login">Login</NavLink>
+                    }
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
                     <NavLink >
                         Home
                     </NavLink>
-                    <NavLink to="/login">
+                    <NavLink to="/AllToys">
                         All Toys
                     </NavLink>
                     <NavLink to="/login">
@@ -38,12 +60,11 @@ const NavBar = () => {
                     <NavLink to="/login">
                         Blogs
                     </NavLink>
-                    <NavLink to="/login">
-                        Logout
-                    </NavLink>
-                    <NavLink to="/login">
-                        Login
-                    </NavLink>
+                    {
+                        user &&
+                        <NavLink onClick={handleLogOut}>
+                            Logout
+                        </NavLink>}
                 </Navbar.Collapse>
             </Navbar>
         </div >
