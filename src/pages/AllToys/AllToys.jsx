@@ -6,13 +6,12 @@ const AllToys = () => {
 
 
     useEffect(() => {
-        fetch("https://toy-house-server.vercel.app/allToys")
+        fetch("http://localhost:5000/allToys")
             .then(res => res.json())
             .then(data => {
                 setToys(data)
             })
     }, [])
-    console.log(toys)
     return (
         <div>
             <div className="overflow-x-auto">
@@ -35,9 +34,9 @@ const AllToys = () => {
                             toys.map((toy, index) => (
                                 <tr key={toy._id}>
                                     <th>{index + 1}</th>
-                                    <td>X</td>
+                                    <td>{toy?.seller}</td>
                                     <td>{toy.name}</td>
-                                    <td>X</td>
+                                    <td>{toy.category}</td>
                                     <td>{toy.price}</td>
                                     <td>{toy.available_quantity}</td>
                                     <td><button className="btn btn-xs">view details</button></td>

@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import MyToys from "../pages/MyToys/MyToys";
 import AddToys from "../pages/AddToys/AddToys";
 import PrivateRoute from "./PrivateRoute";
+import Update from "../pages/MyToys/Update";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
             {
                 path: "addToys",
                 element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
+            },
+            {
+                path:"/update/:id",
+                element:<PrivateRoute><Update></Update></PrivateRoute>,
+                loader:({params})=>fetch(`https://toy-house-server.vercel.app/myToys/${params.id}`)
             }
         ]
     }

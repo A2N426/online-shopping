@@ -1,6 +1,7 @@
 import { Button, Label, TextInput, Textarea } from "flowbite-react";
 import { useContext, useState } from "react";
 import { UserContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
 
@@ -30,13 +31,20 @@ const AddToys = () => {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
-                
             },
             body: JSON.stringify(newToy)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if (data.acknowledged) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Toy Successfully Added',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
             })
 
     }
