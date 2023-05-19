@@ -1,7 +1,9 @@
+import { Button, TextInput } from "flowbite-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllToys = () => {
-
+    const [searchText, setSearchText] = useState("");
     const [toys, setToys] = useState([])
 
 
@@ -12,9 +14,35 @@ const AllToys = () => {
                 setToys(data)
             })
     }, [])
+
+    const handleSearch = () => {
+        fetch(`http://localhost:5000/getToyByText/${searchText}`)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                setToys(data);
+            });
+    };
+
     return (
         <div>
             <div className="overflow-x-auto">
+                <div className="flex justify-center mb-10">
+                    <div className="flex">
+                        <TextInput
+                            onChange={(e) => setSearchText(e.target.value)}
+                            type="text"
+                            placeholder="Search your product"
+                            required={true}
+                        />
+                        <Button
+                            onClick={handleSearch}
+                            gradientDuoTone="pinkToOrange">
+                            Search
+                        </Button>
+                    </div>
+                </div>
+
                 <table className="table w-full">
                     {/* head*/}
                     <thead>
@@ -39,7 +67,11 @@ const AllToys = () => {
                                     <td>{toy.category}</td>
                                     <td>{toy.price}</td>
                                     <td>{toy.available_quantity}</td>
-                                    <td><button className="btn btn-xs">view details</button></td>
+                                    <td>
+                                        <Link
+                                            to={`/details/${toy._id}`}
+                                            className="btn btn-xs">view details</Link>
+                                    </td>
                                 </tr>
                             ))
                         }

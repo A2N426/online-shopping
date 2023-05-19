@@ -10,8 +10,7 @@ const TabsCard = ({ toy }) => {
     const { _id, img, name, price, rating } = toy;
     const { user } = useContext(UserContext);
 
-    const handleDetails = id => {
-        console.log(id);
+    const handleDetails = () => {
         if (!user) {
             Swal.fire({
                 title: 'Warning!',
@@ -33,9 +32,9 @@ const TabsCard = ({ toy }) => {
                     </h5>
                     <p>Price: ${price}</p>
                     <Rating style={{ maxWidth: 140 }} value={parseInt(rating)} />
-                    <Link to="/details" className="w-full">
+                    <Link to={`/details/${_id}`} className="w-full">
                         <Button
-                            onClick={() => handleDetails(_id)}
+                            onClick={handleDetails}
                             gradientDuoTone="purpleToPink"
                         >
                             View Details
