@@ -1,15 +1,44 @@
 import { Label, Textarea } from "flowbite-react";
-import { useLoaderData, useParams } from "react-router-dom";
-
+import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 const Update = () => {
     const toy = useLoaderData()
-    console.log(toy);
-    const {id}=useParams();
-    console.log(id);
+    const { _id } = toy;
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        const form = event.target;
+
+        const price = form.price.value;
+        const available_quantity = form.available_quantity.value;
+        const description = form.description.value;
+        const updatedInfo = { price, available_quantity, description };
+
+        fetch(`http://localhost:5000/allToys/${_id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(updatedInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Update Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
+            })
+    }
+
     return (
-        <div>
-            <form className="modal-box">
-                <div className="card flex-shrink-0 mx-9 w-full max-w-sm  bg-base-100">
+        <div className="flex justify-center">
+            <form onSubmit={handleSubmit} className="modal-box">
+                <div className="card flex-shrink-0 lg:mx-9 w-full max-w-sm  bg-base-100">
                     <div className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -25,7 +54,7 @@ const Update = () => {
                                 <span className="label-text">Available quantity</span>
                             </label>
                             <input type="text"
-                                name="quantity"
+                                name="available_quantity"
                                 defaultValue={toy.available_quantity} placeholder="Available quantity" className="input input-bordered" />
                             <div id="textarea">
                                 <div className="mb-2 block">
@@ -49,7 +78,7 @@ const Update = () => {
                                 <button type="submit" className="btn btn-primary">Update</button>
                             </div>
                             <div className="modal-action">
-                                <label htmlFor="my-modal-6" className="btn">Back</label>
+                                <Link to="/myToys" htmlFor="my-modal-6" className="btn">Back</Link>
                             </div>
                         </div>
                     </div>

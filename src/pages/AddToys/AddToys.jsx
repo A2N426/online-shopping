@@ -14,7 +14,7 @@ const AddToys = () => {
 
         const form = event.target;
 
-        const photo = form.photo.value;
+        const img = form.photo.value;
         const name = form.name.value;
         const seller = user?.displayName;
         const sellerEmail = user?.email;
@@ -24,7 +24,7 @@ const AddToys = () => {
         const category = selected2;
         const description = form.description.value;
 
-        const newToy = { photo, name, category, seller, sellerEmail, price, rating, available_quantity, description }
+        const newToy = { img, name, category, seller, sellerEmail, price, rating, available_quantity, description }
 
         //  https://toy-house-server.vercel.app
         fetch("https://toy-house-server.vercel.app/allToys", {
