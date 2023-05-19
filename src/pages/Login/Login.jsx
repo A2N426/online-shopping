@@ -45,7 +45,7 @@ const Login = () => {
             })
     }
     return (
-        <div className="lg:w-1/2 mx-auto mt-10 mb-20">
+        <div data-aos="zoom-out-up" className="lg:w-1/2 mx-auto mt-10 mb-20">
             <div className="shadow-2xl rounded-lg p-10">
                 <form onSubmit={handleLogIn} className="flex  flex-col gap-4">
                     <h2 className="text-center text-4xl font-semibold">Login Please</h2>

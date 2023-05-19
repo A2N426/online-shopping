@@ -45,7 +45,7 @@ const Register = () => {
             })
     }
     return (
-        <div>
+        <div data-aos="zoom-out-up">
             <div className="lg:w-1/2 mx-auto mt-10 mb-20">
                 <form onSubmit={handleRegister} className="flex shadow-2xl rounded-lg p-10 flex-col gap-4">
                     <h2 className="text-center text-4xl font-semibold">Register Please</h2>
