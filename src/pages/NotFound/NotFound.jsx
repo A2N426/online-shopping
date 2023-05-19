@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { Page } from "../../CustomHook/hook";
 
 
 const NotFound = () => {
+    Page({title:"NOT FOUND"})
     return (
         <div className="flex lg:mt-24 justify-center items-center">
             <div className="lg:h-96 h-screen w-full lg:rounded-lg lg:w-1/2 flex flex-col justify-center items-center bg-[#1A2238]">
