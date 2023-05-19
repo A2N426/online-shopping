@@ -38,7 +38,9 @@ const Update = () => {
     }
 
     return (
-        <div className="flex justify-center">
+        <div data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500" className="flex justify-center">
             <form onSubmit={handleSubmit} className="modal-box">
                 <div className="card flex-shrink-0 lg:mx-9 w-full max-w-sm  bg-base-100">
                     <div className="card-body">

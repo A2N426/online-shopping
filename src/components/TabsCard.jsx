@@ -20,9 +20,11 @@ const TabsCard = ({ toy }) => {
             })
         }
     }
+
     return (
         <div>
-            <div className="max-w-sm">
+            <div className="max-w-sm" data-aos="zoom-out-up">
+                
                 <Card
                     imgAlt="Meaningful alt text for an image that is not purely decorative"
                     imgSrc={img}

@@ -71,7 +71,7 @@ const MyToys = () => {
                     {/* row 1 */}
                     {
                         myToys.map((toy, index) => (
-                            <tr key={toy._id}>
+                            <tr data-aos="zoom-in-right" key={toy._id}>
                                 <th>{index + 1}</th>
                                 <td>{toy?.seller}</td>
                                 <td>{toy.name}</td>

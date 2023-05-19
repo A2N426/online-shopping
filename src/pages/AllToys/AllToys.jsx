@@ -62,12 +62,12 @@ const AllToys = () => {
                         {/* row 1 */}
                         {
                             toys.map((toy, index) => (
-                                <tr key={toy._id}>
+                                <tr data-aos="zoom-in-right" key={toy._id}>
                                     <th>{index + 1}</th>
                                     <td>{toy?.seller}</td>
                                     <td>{toy.name}</td>
                                     <td>{toy.category}</td>
-                                    <td>{toy.price}</td>
+                                    <td>${toy.price}</td>
                                     <td>{toy.available_quantity}</td>
                                     <td>
                                         <Link

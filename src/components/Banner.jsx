@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div>
+        <div data-aos="zoom-out-down">
             <div className="carousel w-full lg:h-[600px] h-[300px]">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://img.freepik.com/free-vector/boy-driving-mini-car-toy-white-background_1308-76150.jpg?size=626&ext=jpg&ga=GA1.2.24677610.1673838713&semt=ais" className="w-full rounded-xl" />

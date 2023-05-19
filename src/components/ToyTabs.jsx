@@ -23,9 +23,9 @@ const ToyTabs = () => {
         <div className='mt-20 mb-20 flex justify-center'>
             <Tabs className="w-full">
                 <TabList className="flex justify-between mb-10">
-                    <Tab className="cursor-pointer border-4 focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("sports car")} >Sports Car</Tab>
-                    <Tab className="cursor-pointer border-4 focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("regular car")}>Regular Car</Tab>
-                    <Tab className="cursor-pointer border-4 focus:outline-none focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("truck")}>Truck</Tab>
+                    <Tab data-aos="zoom-out-right" className="cursor-pointer border-4 focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("sports car")} >Sports Car</Tab>
+                    <Tab data-aos="zoom-in-up" className="cursor-pointer border-4 focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("regular car")}>Regular Car</Tab>
+                    <Tab data-aos="zoom-out-right" className="cursor-pointer border-4 focus:outline-none focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("truck")}>Truck</Tab>
                 </TabList>
 
                 <TabPanel>
