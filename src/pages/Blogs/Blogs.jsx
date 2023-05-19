@@ -80,7 +80,7 @@ const Blogs = () => {
                     </div>
 
                     <h1 className="text-3xl font-semibold hover:underline">What is MongoDB aggregate and how does it work?</h1>
-                    <p className="text-gray-500 mt-5 text-xl">What is Aggregation in MongoDB? Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents that pass through the pipeline.</p>
+                    <p className="text-gray-500 mt-5 text-xl">What is Aggregation in MongoDB? Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents  all that pass through the pipeline.</p>
                     <img className="mx-auto mt-10 mb-10 rounded-xl" src={code} alt="" />
                     <div className='flex justify-between'>
                         <div className='flex items-center gap-3'>
