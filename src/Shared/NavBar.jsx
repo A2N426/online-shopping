@@ -39,29 +39,36 @@ const NavBar = () => {
                         -translate-x-14 -translate-y-4  opacity-0 m-4 mx-auto">{user?.displayName}</span>
                             </div>
                             :
-                            <NavLink className="font-semibold" to="/login">Login</NavLink>
+                            <NavLink
+                                className="font-semibold" to="/login">Login</NavLink>
                     }
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
-                    <NavLink >
+                    <NavLink className="text-lg text-cyan-500">
                         Home
                     </NavLink>
-                    <NavLink to="/AllToys">
+                    <NavLink
+                        className={({ isActive }) => (isActive ? 'text-cyan-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-cyan-700 text-cyan-500 text-lg')}
+                        to="/AllToys">
                         All Toys
                     </NavLink>
-                    <NavLink to="/myToys">
+                    <NavLink className={({ isActive }) => (isActive ? 'text-cyan-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-cyan-700 text-cyan-500 text-lg')} to="/myToys">
                         My Toys
                     </NavLink>
-                    <NavLink to="/addToys">
+                    <NavLink
+                        className={({ isActive }) => (isActive ? 'text-cyan-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-cyan-700 text-cyan-500 text-lg')}
+                        to="/addToys">
                         Add A Toy
                     </NavLink>
-                    <NavLink to="/blogs">
+                    <NavLink
+                        className={({ isActive }) => (isActive ? 'text-cyan-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-cyan-700 text-cyan-500 text-lg')}
+                        to="/blogs">
                         Blogs
-                    </NavLink>
+                    </NavLink >
                     {
                         user &&
-                        <NavLink onClick={handleLogOut}>
+                        <NavLink className="text-cyan-500 text-lg" onClick={handleLogOut}>
                             Logout
                         </NavLink>}
                 </Navbar.Collapse>
