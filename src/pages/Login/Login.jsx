@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
 import { useContext, useState } from "react";
 import { UserContext } from "../../providers/AuthProviders";
+import { Page } from "../../CustomHook/hook";
 
 const Login = () => {
     const { logIn, googleLogIn } = useContext(UserContext);
@@ -11,7 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
-    console.log("from login", from)
+    Page({title:"login"})
 
     const handleLogIn = event => {
         event.preventDefault();

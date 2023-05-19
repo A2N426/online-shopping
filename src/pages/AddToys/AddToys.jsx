@@ -2,11 +2,12 @@ import { Button, Label, TextInput, Textarea } from "flowbite-react";
 import { useContext, useState } from "react";
 import { UserContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
+import { Page } from "../../CustomHook/hook";
 
 const AddToys = () => {
 
     const { user } = useContext(UserContext);
-
+    Page({title:"add a toy"})
 
 
     const handleSubmit = event => {

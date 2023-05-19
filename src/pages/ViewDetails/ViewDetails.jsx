@@ -1,10 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { Page } from "../../CustomHook/hook";
 
 const ViewDetails = () => {
     const toy = useLoaderData();
     const { name, img, category, price, rating, available_quantity, description } = toy
+    Page({title:"view details"})
+
     return (
         <div>
             <div className="card font-thin lg:card-side bg-base-100 shadow-2xl lg:p-5">

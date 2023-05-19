@@ -1,11 +1,13 @@
 import { Button, TextInput } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Page } from "../../CustomHook/hook";
 
 const AllToys = () => {
     const [searchText, setSearchText] = useState("");
     const [toys, setToys] = useState([])
 
+    Page({title:"all toy"})
 
     useEffect(() => {
         fetch("http://localhost:5000/allToys")

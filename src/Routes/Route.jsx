@@ -9,11 +9,13 @@ import AddToys from "../pages/AddToys/AddToys";
 import PrivateRoute from "./PrivateRoute";
 import Update from "../pages/MyToys/Update";
 import ViewDetails from "../pages/ViewDetails/ViewDetails";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <NotFound></NotFound>,
         children: [
             {
                 path: "/",

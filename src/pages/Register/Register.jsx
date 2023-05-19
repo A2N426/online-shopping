@@ -2,10 +2,13 @@ import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../providers/AuthProviders";
+import { Page } from "../../CustomHook/hook";
 
 const Register = () => {
     const [success, setSuccess] = useState("")
     const [err, setErr] = useState("")
+
+    Page({title:"register"})
 
     const { register, changeProfile } = useContext(UserContext);
 

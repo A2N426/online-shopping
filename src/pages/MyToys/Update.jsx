@@ -1,9 +1,11 @@
 import { Label, Textarea } from "flowbite-react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Page } from "../../CustomHook/hook";
 const Update = () => {
     const toy = useLoaderData()
     const { _id } = toy;
+    Page({title:"update toy"})
 
     const handleSubmit = event => {
         event.preventDefault();

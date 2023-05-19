@@ -2,11 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Page } from "../../CustomHook/hook";
 
 const MyToys = () => {
-
     const { user } = useContext(UserContext)
     const [myToys, setMyToys] = useState([]);
+    Page({title:"my toy"})
 
     useEffect(() => {
         fetch(`http://localhost:5000/myToys/${user?.email}`)
