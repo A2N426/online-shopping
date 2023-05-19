@@ -25,7 +25,7 @@ const NavBar = () => {
                         className="mr-3 lg:w-14 lg:h-14 h-9 rounded-full"
                         alt="Toy logo"
                     />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+                    <span className="self-center whitespace-nowrap  text-2xl font-bold dark:text-white">
                         Toy House
                     </span>
                 </Navbar.Brand>
