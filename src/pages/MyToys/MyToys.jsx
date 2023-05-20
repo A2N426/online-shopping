@@ -3,7 +3,6 @@ import { UserContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { Page } from "../../CustomHook/hook";
-import { Button } from "flowbite-react";
 
 const MyToys = () => {
     const { user } = useContext(UserContext)
@@ -66,12 +65,12 @@ const MyToys = () => {
     return (
         <div>
             <div className="flex gap-5 justify-end mt-5 mb-5">
-                <Button onClick={handleSortAscending}>
+                <button className="btn btn-sm btn-outline btn-info" onClick={handleSortAscending}>
                     Sort By ascending
-                </Button>
-                <Button onClick={handleSortDescending}>
+                </button>
+                <button className="btn btn-sm btn-outline btn-info" onClick={handleSortDescending}>
                     Sort By descending
-                </Button>
+                </button>
             </div>
             <div className="overflow-x-auto">
                 <table className="table table-zebra  w-full">
@@ -101,15 +100,15 @@ const MyToys = () => {
                                     <td>${toy.price}</td>
                                     <td>{toy.available_quantity}</td>
                                     <td>
-                                        <Link to={`/details/${toy._id}`} className="btn btn-outline btn-sm btn-info">View Details</Link>
+                                        <Link to={`/details/${toy._id}`} className="btn btn-outline btn-sm btn-active btn-secondary">View Details</Link>
                                     </td>
                                     <td>
                                         <Link to={`/update/${toy._id}`} className="btn
                                         btn-sm 
-                                        bg-blue-600">Update</Link>
+                                        btn-active btn-primary">Update</Link>
                                     </td>
                                     <td>
-                                        <button onClick={() => handleDelete(toy._id)} className="btn btn-sm btn-outline btn-error">Delete</button>
+                                        <button onClick={() => handleDelete(toy._id)} className="btn btn-sm btn-error bg-red-600 text-white">Delete</button>
                                     </td>
                                 </tr>
 

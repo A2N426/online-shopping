@@ -6,7 +6,7 @@ const Trending = () => {
             <h1 className="text-4xl font-bold text-center">Trending Toys</h1>
             <p className="text-center font-semibold te mt-2">Here are world wide <span className="text-red-600 underline"> trending product</span> </p>
             <div>
-                <div className="grid h-56 grid-cols-2 gap-4 sm:h-64 xl:h-80 2xl:h-96 mt-10">
+                <div className="grid lg:grid-cols-2 gap-4 h-96  mt-10">
                     <div data-aos="zoom-in-right">
                         <Carousel >
                             <img
@@ -22,7 +22,7 @@ const Trending = () => {
                                 alt="..."
                             />
                             <img
-                                src="https://images.pexels.com/photos/35967/mini-cooper-auto-model-vehicle.jpg?auto=compress&cs=tinysrgb&w=600"
+                                src="https://img.freepik.com/premium-photo/toys-collection-isolated-white-background_635416-2394.jpg?size=626&ext=jpg&ga=GA1.2.24677610.1673838713&semt=ais"
                                 alt="..."
                             />
                             <img
@@ -38,7 +38,7 @@ const Trending = () => {
                                 alt="..."
                             />
                             <img
-                                src="https://images.freeimages.com/images/previews/0c7/vehicle-1156020.jpg"
+                                src="https://img.freepik.com/premium-photo/toys-collection-isolated-white-background_635416-2394.jpg?size=626&ext=jpg&ga=GA1.2.24677610.1673838713&semt=ais"
                                 alt="..."
                             />
                             <img

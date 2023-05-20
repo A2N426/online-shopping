@@ -25,20 +25,30 @@ const ToyTabs = () => {
             <div className='mt-20 mb-20 flex justify-center'>
                 <Tabs className="w-full">
                     <TabList className="flex justify-between mb-10 border-2">
+                        <Tab className="
+                        cursor-pointer lg:px-20 p-2 py-5 
+                        border
+                        focus:text-blue-600 
+                        focus:font-semibold 
+                        outline
+                        outline-1
+                        focus:outline-4
+                        outline-blue-600 focus:text-blue text-lg font-semibold focus:bg-slate-100" onClick={() => handleTabClick("sports car")} ><span className='text-blue-600'>Sports Car</span></Tab>
                         <Tab className="cursor-pointer lg:px-20 p-2 py-5 
                         border
                         focus:font-semibold 
-                        focus:outline
-                        outline-2
-                         outline-blue-600 focus:text-blue-600 text-lg font-semibold" onClick={() => handleTabClick("sports car")} >Sports Car</Tab>
+                        outline
+                        outline-1
+                        focus:outline-4
+                        text-blue-600
+                        outline-blue-600 focus:text-blue text-lg font-semibold focus:bg-slate-100" onClick={() => handleTabClick("regular car")}><span className='text-blue-600'>Regular Car</span></Tab>
                         <Tab className="cursor-pointer lg:px-20 p-2 py-5 
-                        border outline-2
+                        border
                         focus:font-semibold 
-                        focus:outline focus:outline-blue-600 focus:text-blue-600 text-lg font-semibold" onClick={() => handleTabClick("regular car")}>Regular Car</Tab>
-                        <Tab className="cursor-pointer lg:px-20 p-2 py-5 
-                        border outline-2
-                        focus:font-semibold 
-                        focus:outline focus:outline-blue-600 focus:text-blue-600 text-lg font-semibold" onClick={() => handleTabClick("truck")}>Truck</Tab>
+                        outline
+                        outline-1
+                        focus:outline-4
+                        outline-blue-600 focus:text-blue text-lg font-semibold focus:bg-slate-100" onClick={() => handleTabClick("truck")}><span className='text-blue-600'>Super Truck</span></Tab>
                     </TabList>
 
                     <TabPanel>

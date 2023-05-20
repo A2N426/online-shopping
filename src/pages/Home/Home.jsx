@@ -6,14 +6,16 @@ import ToyTabs from "../../components/ToyTabs";
 import Trending from "../../components/Trending";
 
 const Home = () => {
-    Page({title:"Home"})
+    Page({ title: "Home" })
     return (
         <div>
             <Banner></Banner>
-            <Gallery></Gallery>
-            <ToyTabs></ToyTabs>
-            <Trending></Trending>
-            <Service></Service>
+            <div className="lg:px-24 p-6">
+                <Gallery></Gallery>
+                <ToyTabs></ToyTabs>
+                <Trending></Trending>
+                <Service></Service>
+            </div>
         </div>
     );
 };

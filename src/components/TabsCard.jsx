@@ -24,7 +24,7 @@ const TabsCard = ({ toy }) => {
     return (
         <div>
             <div className="max-w-sm" data-aos="zoom-out-up">
-                
+
                 <Card
                     imgAlt="Meaningful alt text for an image that is not purely decorative"
                     imgSrc={img}
@@ -32,10 +32,11 @@ const TabsCard = ({ toy }) => {
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         {name}
                     </h5>
-                    <p>Price: ${price}</p>
+                    <p className="font-semibold">Price: ${price}</p>
                     <Rating style={{ maxWidth: 140 }} value={parseInt(rating)} />
-                    <Link to={`/details/${_id}`} className="w-full">
+                    <Link to={`/details/${_id}`} >
                         <Button
+                            className="w-full"
                             onClick={handleDetails}
                             gradientDuoTone="purpleToPink"
                         >

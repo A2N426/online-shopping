@@ -2,14 +2,15 @@ import toy2 from '../assets/toy2.jpg'
 import toy3 from '../assets/toy3.jpg'
 import toy4 from '../assets/toy4.jpg'
 import toy5 from '../assets/toy5.jpg'
+import { FaArrowLeft,FaArrowRight } from 'react-icons/fa';
 
 const Banner = () => {
     return (
         <div data-aos="zoom-out-down">
             <div className="carousel w-full lg:h-[600px] h-[300px] mt-10">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src={toy4} className="w-full rounded-xl" />
-                    <div className="absolute rounded-xl h-full flex bg-gradient-to-r from-[#290b2d] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
+                    <img src={toy4} className="w-full " />
+                    <div className="absolute  h-full flex bg-gradient-to-r from-[#290b2d] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
                         <div className='text-white lg:w-1/2'>
                             <h1 className='lg:text-6xl text-2xl font-bold'>TOY SHOP</h1>
                             <h3 className='lg:text-3xl font-mono lg:mt-1'>FOR THE HOLIDAY</h3>
@@ -18,14 +19,18 @@ const Banner = () => {
                             <button className="outline outline-1 lg:font-semibold font-extralight outline-white hover:btn hover:btn-secondary hover:outline-none p-2 lg:p-3 rounded-lg lg:w-36 w-32">More info</button>
                         </div>
                     </div>
-                    <div className="absolute flex justify-between transform -translate-y-1/2 lg:left-5 lg:gap-0 gap-10 right-5 lg:top-1/2 top-5 ">
-                        <a href="#slide4" className="lg:btn lg:btn-circle lg:hover:bg-yellow-500">❮</a>
-                        <a href="#slide2" className="lg:btn lg:btn-circle lg:hover:bg-yellow-500">❯</a>
+                    <div className="absolute flex justify-between items-center transform -translate-y-1/2 lg:left-5 lg:gap-0 gap-10 right-5 lg:top-1/2 top-5 ">
+                        <a href="#slide4" className="lg:w-14 lg:flex items-center justify-center lg:rounded-full lg:ring-2 transition ease-in-out  
+                        hover:scale-110
+                        focus:scale-110  duration-300 py-5"><FaArrowLeft className='text-white text-lg'/></a>
+                        <a href="#slide2" className="lg:w-14 lg:flex items-center justify-center lg:rounded-full lg:ring-2 transition ease-in-out  
+                        hover:scale-110
+                        focus:scale-110  duration-300 py-5"><FaArrowRight className='text-white text-lg'/></a>
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src={toy2} className="w-full rounded-xl" />
-                    <div className="absolute rounded-xl h-full flex bg-gradient-to-r from-[#0e4655] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
+                    <img src={toy2} className="w-full " />
+                    <div className="absolute  h-full flex bg-gradient-to-r from-[#0e4655] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
                         <div className='text-white lg:w-1/2'>
                             <h1 className='lg:text-6xl text-2xl font-bold'>TOY SHOP</h1>
                             <h3 className='lg:text-3xl font-mono lg:mt-1'>FOR THE HOLIDAY</h3>
@@ -34,14 +39,18 @@ const Banner = () => {
                             <button className="outline outline-1 lg:font-semibold font-extralight outline-white hover:btn hover:btn-primary hover:outline-none p-2 lg:p-3 rounded-lg lg:w-36 w-32">More info</button>
                         </div>
                     </div>
-                    <div className="absolute flex justify-between transform -translate-y-1/2 lg:left-5 lg:gap-0 gap-10 right-5 lg:top-1/2 top-5 ">
-                        <a href="#slide1" className="lg:btn lg:btn-circle lg:hover:bg-yellow-500">❮</a>
-                        <a href="#slide3" className="lg:btn lg:btn-circle lg:hover:bg-yellow-500">❯</a>
+                    <div className="absolute flex justify-between items-center transform -translate-y-1/2 lg:left-5 lg:gap-0 gap-10 right-5 lg:top-1/2 top-5 ">
+                        <a href="#slide1" className="lg:w-14 lg:flex items-center justify-center lg:rounded-full lg:ring-2 transition ease-in-out  
+                        hover:scale-110
+                        focus:scale-110  duration-300 py-5"><FaArrowLeft className='text-white text-lg'/></a>
+                        <a href="#slide3" className="lg:w-14 lg:flex items-center justify-center lg:rounded-full lg:ring-2 transition ease-in-out  
+                        hover:scale-110
+                        focus:scale-110  duration-300 py-5"><FaArrowRight className='text-white text-lg'/></a>
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src={toy3} className="w-full rounded-xl" />
-                    <div className="absolute rounded-xl h-full flex bg-gradient-to-r from-[#0e4655] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
+                    <img src={toy3} className="w-full " />
+                    <div className="absolute  h-full flex bg-gradient-to-r from-[#0e4655] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
                         <div className='text-white lg:w-1/2'>
                             <h1 className='lg:text-6xl text-2xl font-bold'>TOY SHOP</h1>
                             <h3 className='lg:text-3xl font-mono lg:mt-1'>FOR THE HOLIDAY</h3>
@@ -50,14 +59,18 @@ const Banner = () => {
                             <button className="outline outline-1 lg:font-semibold font-extralight outline-white hover:btn hover:btn-primary hover:outline-none p-2 lg:p-3 rounded-lg lg:w-36 w-32">More info</button>
                         </div>
                     </div>
-                    <div className="absolute flex justify-between transform -translate-y-1/2 lg:left-5 lg:gap-0 gap-10 right-5 lg:top-1/2 top-5 ">
-                        <a href="#slide2" className="lg:btn lg:btn-circle lg:hover:bg-yellow-500">❮</a>
-                        <a href="#slide4" className="lg:btn lg:btn-circle lg:hover:bg-yellow-500">❯</a>
+                    <div className="absolute flex justify-between items-center transform -translate-y-1/2 lg:left-5 lg:gap-0 gap-10 right-5 lg:top-1/2 top-5 ">
+                        <a href="#slide2" className="lg:w-14 lg:flex items-center justify-center lg:rounded-full lg:ring-2 transition ease-in-out  
+                        hover:scale-110
+                        focus:scale-110  duration-300 py-5"><FaArrowLeft className='text-white text-lg'/></a>
+                        <a href="#slide4" className="lg:w-14 lg:flex items-center justify-center lg:rounded-full lg:ring-2 transition ease-in-out  
+                        hover:scale-110
+                        focus:scale-110  duration-300 py-5"><FaArrowRight className='text-white text-lg'/></a>
                     </div>
                 </div>
                 <div id="slide4" className="carousel-item relative w-full">
-                    <img src={toy5} className="w-full rounded-xl" />
-                    <div className="absolute rounded-xl h-full flex bg-gradient-to-r from-[#0e4655] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
+                    <img src={toy5} className="w-full " />
+                    <div className="absolute  h-full flex bg-gradient-to-r from-[#0e4655] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
                         <div className='text-white lg:w-1/2'>
                             <h1 className='lg:text-6xl text-2xl font-bold'>TOY SHOP</h1>
                             <h3 className='lg:text-3xl font-mono lg:mt-1'>FOR THE HOLIDAY</h3>
@@ -66,9 +79,13 @@ const Banner = () => {
                             <button className="outline outline-1 lg:font-semibold font-extralight outline-white hover:btn hover:btn-primary hover:outline-none p-2 lg:p-3 rounded-lg lg:w-36 w-32">More info</button>
                         </div>
                     </div>
-                    <div className="absolute flex justify-between transform -translate-y-1/2 lg:left-5 lg:gap-0 gap-10 right-5 lg:top-1/2 top-5 ">
-                        <a href="#slide3" className="lg:btn lg:btn-circle lg:hover:bg-yellow-500">❮</a>
-                        <a href="#slide1" className="lg:btn lg:btn-circle lg:hover:bg-yellow-500">❯</a>
+                    <div className="absolute flex justify-between items-center transform -translate-y-1/2 lg:left-5 lg:gap-0 gap-10 right-5 lg:top-1/2 top-5 ">
+                        <a href="#slide3" className="lg:w-14 lg:flex items-center justify-center lg:rounded-full lg:ring-2 transition ease-in-out  
+                        hover:scale-110
+                        focus:scale-110  duration-300 py-5"><FaArrowLeft className='text-white text-lg'/></a>
+                        <a href="#slide1" className="lg:w-14 lg:flex items-center justify-center lg:rounded-full lg:ring-2 transition ease-in-out  
+                        hover:scale-110
+                        focus:scale-110  duration-300 py-5"><FaArrowRight className='text-white text-lg'/></a>
                     </div>
                 </div>
             </div>

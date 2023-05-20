@@ -4,7 +4,7 @@ import Foot from "../Shared/Foot";
 
 const Main = () => {
     return (
-        <div className="lg:px-28 px-6">
+        <div className="overflow-hidden">
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Foot></Foot>
