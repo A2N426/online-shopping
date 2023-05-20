@@ -40,35 +40,35 @@ const NavBar = () => {
                             </div>
                             :
                             <NavLink
-                                className="font-semibold" to="/login">Login</NavLink>
+                                className="font-semibold text-lg" to="/login">Login</NavLink>
                     }
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
-                    <NavLink className="text-lg text-cyan-500">
+                    <NavLink className="text-lg">
                         Home
                     </NavLink>
                     <NavLink
-                        className={({ isActive }) => (isActive ? 'text-cyan-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-cyan-700 text-cyan-500 text-lg')}
+                        className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')}
                         to="/AllToys">
                         All Toys
                     </NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'text-cyan-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-cyan-700 text-cyan-500 text-lg')} to="/myToys">
+                    <NavLink className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')} to="/myToys">
                         My Toys
                     </NavLink>
                     <NavLink
-                        className={({ isActive }) => (isActive ? 'text-cyan-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-cyan-700 text-cyan-500 text-lg')}
+                        className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')}
                         to="/addToys">
                         Add A Toy
                     </NavLink>
                     <NavLink
-                        className={({ isActive }) => (isActive ? 'text-cyan-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-cyan-700 text-cyan-500 text-lg')}
+                        className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')}
                         to="/blogs">
                         Blogs
                     </NavLink >
                     {
                         user &&
-                        <NavLink className="text-cyan-500 text-lg" onClick={handleLogOut}>
+                        <NavLink className="text-lg" onClick={handleLogOut}>
                             Logout
                         </NavLink>}
                 </Navbar.Collapse>

@@ -90,7 +90,7 @@ const Login = () => {
                 </form>
                 <div className="divider">OR</div>
                 <button onClick={handleGoogleLogIn} className="bg-blue-800 w-1/2 mx-auto text-white rounded-xl flex items-center justify-center gap-2 py-3 font-semibold "><FaGoogle className="text-2xl" />Google</button>
-                <p className="text-center font-semibold mt-3">do not have an account? Please <Link to="/register" className="text-blue-800 font-semibold hover:underline">Register</Link></p>
+                <p className="text-center font-semibold mt-3">Do not have an account? Please <Link to="/register" className="text-blue-800 font-semibold hover:underline">Register</Link></p>
             </div>
         </div>
     );

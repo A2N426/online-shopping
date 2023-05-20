@@ -4,6 +4,7 @@ const Trending = () => {
     return (
         <div className="mt-20 mb-20">
             <h1 className="text-4xl font-bold text-center">Trending Toys</h1>
+            <p className="text-center font-semibold te mt-2">Here are world wide <span className="text-red-600 underline"> trending product</span> </p>
             <div>
                 <div className="grid h-56 grid-cols-2 gap-4 sm:h-64 xl:h-80 2xl:h-96 mt-10">
                     <div data-aos="zoom-in-right">

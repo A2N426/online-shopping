@@ -5,9 +5,11 @@ import { FaArrowRight } from 'react-icons/fa';
 const Blogs = () => {
     return (
         <div>
-            <h1 className="text-5xl font-extrabold uppercase text-center lg:mt-24">That Stuck 4 Question</h1>
-            <p className="text-center text-2xl font-mono mt-5">We write about react js concept that is mostly uses.</p>
-            <div className='mb-5'>
+            <div data-aos="flip-left">
+                <h1 className="text-5xl font-extrabold uppercase text-center lg:mt-24">That Stuck 4 Question</h1>
+                <p className="text-center text-2xl font-mono mt-5">We write about react js concept that is mostly uses.</p>
+            </div>
+            <div data-aos="zoom-in-up" className='mb-5'>
                 <div className="mt-10 border rounded-md lg:p-10 p-5">
 
                     <div className='flex justify-between'>
@@ -24,11 +26,11 @@ const Blogs = () => {
                             <img className='rounded-full w-10' src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=626&ext=jpg&ga=GA1.1.24677610.1673838713&semt=ais" alt="" />
                             <p className='text-lg font-semibold'>Pitter Son</p>
                         </div>
-                        <p className='text-blue-700 text-lg gap-2 font-semibold flex items-center'>Read More <FaArrowRight/></p>
+                        <p className='text-blue-700 text-lg gap-2 font-semibold flex items-center'>Read More <FaArrowRight /></p>
                     </div>
                 </div>
             </div>
-            <div>
+            <div data-aos="flip-up">
                 <div className="mt-10 border rounded-md lg:p-10 p-5">
 
                     <div className='flex justify-between'>
@@ -45,11 +47,11 @@ const Blogs = () => {
                             <img className='rounded-full w-10' src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=626&ext=jpg&ga=GA1.1.24677610.1673838713&semt=ais" alt="" />
                             <p className='text-lg font-semibold'>Pitter Son</p>
                         </div>
-                        <p className='text-blue-700 text-lg gap-2 font-semibold flex items-center'>Read More <FaArrowRight/></p>
+                        <p className='text-blue-700 text-lg gap-2 font-semibold flex items-center'>Read More <FaArrowRight /></p>
                     </div>
                 </div>
             </div>
-            <div>
+            <div data-aos="zoom-in">
                 <div className="mt-10 border rounded-md lg:p-10 p-5">
 
                     <div className='flex justify-between'>
@@ -66,11 +68,11 @@ const Blogs = () => {
                             <img className='rounded-full w-10' src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=626&ext=jpg&ga=GA1.1.24677610.1673838713&semt=ais" alt="" />
                             <p className='text-lg font-semibold'>Pitter Son</p>
                         </div>
-                        <p className='text-blue-700 text-lg gap-2 font-semibold flex items-center'>Read More <FaArrowRight/></p>
+                        <p className='text-blue-700 text-lg gap-2 font-semibold flex items-center'>Read More <FaArrowRight /></p>
                     </div>
                 </div>
             </div>
-            <div>
+            <div data-aos="zoom-in-down">
                 <div className="mt-10 border rounded-md lg:p-10 p-5">
 
                     <div className='flex justify-between'>
@@ -87,7 +89,7 @@ const Blogs = () => {
                             <img className='rounded-full w-10' src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=626&ext=jpg&ga=GA1.1.24677610.1673838713&semt=ais" alt="" />
                             <p className='text-lg font-semibold'>Pitter Son</p>
                         </div>
-                        <p className='text-blue-700 text-lg gap-2 font-semibold flex items-center'>Read More <FaArrowRight/></p>
+                        <p className='text-blue-700 text-lg gap-2 font-semibold flex items-center'>Read More <FaArrowRight /></p>
                     </div>
                 </div>
             </div>

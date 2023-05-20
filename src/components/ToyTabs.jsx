@@ -9,7 +9,7 @@ const ToyTabs = () => {
     const [active, setActive] = useState("sports car")
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allToysByCategory/${active}`)
+        fetch(`https://toy-house-server.vercel.app/allToysByCategory/${active}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data);
@@ -20,46 +20,60 @@ const ToyTabs = () => {
         setActive(tabName)
     }
     return (
-        <div className='mt-20 mb-20 flex justify-center'>
-            <Tabs className="w-full">
-                <TabList className="flex justify-between mb-10">
-                    <Tab data-aos="zoom-out-right" className="cursor-pointer border-4 focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("sports car")} >Sports Car</Tab>
-                    <Tab data-aos="zoom-in-up" className="cursor-pointer border-4 focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("regular car")}>Regular Car</Tab>
-                    <Tab data-aos="zoom-out-right" className="cursor-pointer border-4 focus:outline-none focus:border-none lg:px-10 p-2 py-3 focus:text-2xl focus:font-semibold focus:bg-rose-600 focus:text-white" onClick={() => handleTabClick("truck")}>Truck</Tab>
-                </TabList>
+        <div>
+            <h1 className='text-center text-4xl font-bold'>Shop By Category</h1>
+            <div className='mt-20 mb-20 flex justify-center'>
+                <Tabs className="w-full">
+                    <TabList className="flex justify-between mb-10 border-2">
+                        <Tab className="cursor-pointer lg:px-20 p-2 py-5 
+                        border
+                        focus:font-semibold 
+                        focus:outline
+                        outline-2
+                         outline-blue-600 focus:text-blue-600 text-lg font-semibold" onClick={() => handleTabClick("sports car")} >Sports Car</Tab>
+                        <Tab className="cursor-pointer lg:px-20 p-2 py-5 
+                        border outline-2
+                        focus:font-semibold 
+                        focus:outline focus:outline-blue-600 focus:text-blue-600 text-lg font-semibold" onClick={() => handleTabClick("regular car")}>Regular Car</Tab>
+                        <Tab className="cursor-pointer lg:px-20 p-2 py-5 
+                        border outline-2
+                        focus:font-semibold 
+                        focus:outline focus:outline-blue-600 focus:text-blue-600 text-lg font-semibold" onClick={() => handleTabClick("truck")}>Truck</Tab>
+                    </TabList>
 
-                <TabPanel>
-                    <div className='grid  grid-cols-1 lg:grid-cols-3 gap-10'>
-                        {
-                            toys.map(toy => <TabsCard
-                                key={toy._id}
-                                toy={toy}
-                            ></TabsCard>)
-                        }
-                    </div>
-                </TabPanel>
-                <TabPanel>
-                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
-                        {
-                            toys.map(toy => <TabsCard
-                                key={toy._id}
-                                toy={toy}
-                            ></TabsCard>)
-                        }
-                    </div>
-                </TabPanel>
-                <TabPanel>
-                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
-                        {
-                            toys.map(toy => <TabsCard
-                                key={toy._id}
-                                toy={toy}
-                            ></TabsCard>)
-                        }
-                    </div>
-                </TabPanel>
+                    <TabPanel>
+                        <div className='grid  grid-cols-1 lg:grid-cols-3 gap-10'>
+                            {
+                                toys.map(toy => <TabsCard
+                                    key={toy._id}
+                                    toy={toy}
+                                ></TabsCard>)
+                            }
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
+                            {
+                                toys.map(toy => <TabsCard
+                                    key={toy._id}
+                                    toy={toy}
+                                ></TabsCard>)
+                            }
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
+                            {
+                                toys.map(toy => <TabsCard
+                                    key={toy._id}
+                                    toy={toy}
+                                ></TabsCard>)
+                            }
+                        </div>
+                    </TabPanel>
 
-            </Tabs>
+                </Tabs>
+            </div>
         </div>
     );
 };

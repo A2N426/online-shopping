@@ -7,10 +7,10 @@ const AllToys = () => {
     const [searchText, setSearchText] = useState("");
     const [toys, setToys] = useState([])
 
-    Page({title:"all toy"})
+    Page({ title: "all toy" })
 
     useEffect(() => {
-        fetch("http://localhost:5000/allToys")
+        fetch("https://toy-house-server.vercel.app/allToys")
             .then(res => res.json())
             .then(data => {
                 setToys(data)
@@ -18,7 +18,7 @@ const AllToys = () => {
     }, [])
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/getToyByText/${searchText}`)
+        fetch(`https://toy-house-server.vercel.app/getToyByText/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -39,17 +39,17 @@ const AllToys = () => {
                         />
                         <Button
                             onClick={handleSearch}
-                            gradientDuoTone="pinkToOrange">
+                            gradientDuoTone="purpleToBlue">
                             Search
                         </Button>
                     </div>
                 </div>
 
-                <table className="table w-full">
+                <table className="table table-zebra w-full">
                     {/* head*/}
                     <thead>
                         <tr>
-                            <th>SL</th>
+                            <th className="text-lg">SL</th>
                             <th>Seller</th>
                             <th>Name</th>
                             <th>Category</th>
@@ -72,7 +72,7 @@ const AllToys = () => {
                                     <td>
                                         <Link
                                             to={`/details/${toy._id}`}
-                                            className="btn btn-xs">view details</Link>
+                                            className="btn btn-outline btn-sm btn-info">view details</Link>
                                     </td>
                                 </tr>
                             ))
