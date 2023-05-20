@@ -51,13 +51,13 @@ const MyToys = () => {
     }
 
     const handleSortAscending = () => {
-        fetch("https://toy-house-server.vercel.app/sortByAscending")
+        fetch(`https://toy-house-server.vercel.app/sortByAscending/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }
 
     const handleSortDescending = () => {
-        fetch("https://toy-house-server.vercel.app/sortByDescending")
+        fetch(`https://toy-house-server.vercel.app/sortByDescending/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }

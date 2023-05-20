@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Blogs = () => {
     return (
-        <div>
+        <div className='lg:px-24 p-6'>
             <div data-aos="flip-left">
                 <h1 className="text-5xl font-extrabold uppercase text-center lg:mt-24">That Stuck 4 Question</h1>
                 <p className="text-center text-2xl font-mono mt-5">We write about react js concept that is mostly uses.</p>

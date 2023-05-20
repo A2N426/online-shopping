@@ -21,10 +21,10 @@ const ToyTabs = () => {
     }
     return (
         <div>
-            <h1 className='text-center text-4xl font-bold'>Shop By Category</h1>
+            <h1 className='text-center text-4xl font-semibold'>Shop By Category</h1>
             <div className='mt-20 mb-20 flex justify-center'>
                 <Tabs className="w-full">
-                    <TabList className="flex justify-between mb-10 border-2">
+                    <TabList className="flex justify-between mb-10 border-4 border-blue-600 rounded-md">
                         <Tab className="
                         cursor-pointer lg:px-20 p-2 py-5 
                         border

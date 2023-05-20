@@ -18,14 +18,15 @@ const NavBar = () => {
             <Navbar
                 fluid={true}
                 rounded={true}
+                
             >
                 <Navbar.Brand>
                     <img
-                        src="https://img.freepik.com/free-vector/gradient-t-logo-template_23-2149372726.jpg?size=626&ext=jpg&ga=GA1.1.24677610.1673838713&semt=ais"
+                        src="https://img.freepik.com/free-vector/gradient-t-logo-template_23-2149371037.jpg?size=626&ext=jpg&ga=GA1.2.24677610.1673838713&semt=ais"
                         className="mr-3 lg:w-14 lg:h-14 h-9 rounded-full"
                         alt="Toy logo"
                     />
-                    <span className="self-center whitespace-nowrap  text-2xl font-bold dark:text-white">
+                    <span className="self-center whitespace-nowrap  text-2xl font-bold  dark:text-white bg-gradient-to-r from-blue-600 via-rose-500 to-indigo-400 inline-block text-transparent bg-clip-text">
                         Toy House
                     </span>
                 </Navbar.Brand>

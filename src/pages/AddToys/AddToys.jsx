@@ -216,7 +216,7 @@ const AddToys = () => {
                         rows={4}
                     />
                 </div>
-                <Button type="submit">
+                <Button className="mx-auto w-1/3 py-2" gradientDuoTone="purpleToBlue" type="submit">
                     Add Toy
                 </Button>
             </form>
