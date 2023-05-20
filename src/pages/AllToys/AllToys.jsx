@@ -72,7 +72,7 @@ const AllToys = () => {
                                     <td>
                                         <Link
                                             to={`/details/${toy._id}`}
-                                            className="btn btn-outline btn-sm btn-info">view details</Link>
+                                            className="btn btn-sm btn-active btn-primary text-white">view details</Link>
                                     </td>
                                 </tr>
                             ))

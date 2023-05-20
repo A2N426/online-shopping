@@ -80,7 +80,7 @@ const AddToys = () => {
 
 
     return (
-        <div>
+        <div className="lg:px-24 px-6">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div>

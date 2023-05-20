@@ -100,12 +100,13 @@ const MyToys = () => {
                                     <td>${toy.price}</td>
                                     <td>{toy.available_quantity}</td>
                                     <td>
-                                        <Link to={`/details/${toy._id}`} className="btn btn-outline btn-sm btn-active btn-secondary">View Details</Link>
+                                        <Link to={`/details/${toy._id}`} className="btn btn-outline btn-sm btn-active btn-primary">View Details</Link>
                                     </td>
                                     <td>
                                         <Link to={`/update/${toy._id}`} className="btn
                                         btn-sm 
-                                        btn-active btn-primary">Update</Link>
+                                        btn-active
+                                        btn-outline btn-accent ">Update</Link>
                                     </td>
                                     <td>
                                         <button onClick={() => handleDelete(toy._id)} className="btn btn-sm btn-error bg-red-600 text-white">Delete</button>
