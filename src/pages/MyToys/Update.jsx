@@ -18,7 +18,7 @@ const Update = () => {
         const updatedInfo = { price, available_quantity, description };
 
         fetch(`https://toy-house-server.vercel.app/allToys/${_id}`, {
-            method: "PATCH",
+            method: "PUT",
             headers: {
                 "Content-type": "application/json"
             },
@@ -26,6 +26,7 @@ const Update = () => {
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
