@@ -15,7 +15,6 @@ const AllToys = () => {
     const totalPage = Math.ceil(totalToys / toyPerPage)
 
     const pageNumbers = [...Array(totalPage).keys()];
-    console.log(pageNumbers);
 
     Page({ title: "all toy" })
 
@@ -71,7 +70,7 @@ const AllToys = () => {
                             <th className="text-lg">SL</th>
                             <th>Seller</th>
                             <th>Name</th>
-                            <th>Category</th>
+                            <th>SUb-Category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
                             <th>View in details</th>

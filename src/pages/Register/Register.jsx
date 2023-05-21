@@ -1,12 +1,13 @@
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../providers/AuthProviders";
 import { Page } from "../../CustomHook/hook";
 
 const Register = () => {
     const [success, setSuccess] = useState("")
     const [err, setErr] = useState("")
+    const navigate = useNavigate();
 
     Page({title:"register"})
 
@@ -39,6 +40,8 @@ const Register = () => {
                 const createdUser = result.user;
                 changeProfile(createdUser, name, photo)
                 setSuccess("Successfully Created")
+                navigate("/")
+
             })
             .catch(err => {
                 setErr(err.message)
@@ -121,7 +124,7 @@ const Register = () => {
                     <p><small className="text-red-700">{err}</small></p>
                     <p><small className="text-success">{success}</small></p>
                     <Button type="submit">
-                        Login
+                        Register
                     </Button>
                     <p className="text-center font-semibold">Already have an account? Please <Link to="/login" className="text-blue-800 font-semibold hover:underline">Login</Link></p>
                 </form>

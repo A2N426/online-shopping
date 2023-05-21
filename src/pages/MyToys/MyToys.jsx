@@ -93,7 +93,7 @@ const MyToys = () => {
                             <th>SL</th>
                             <th>Seller</th>
                             <th>Name</th>
-                            <th>Category</th>
+                            <th>Sub-Category</th>
                             <th>Price</th>
                             <th>Available Quantity</th>
                             <th>View in details</th>

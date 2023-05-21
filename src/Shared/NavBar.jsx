@@ -41,7 +41,7 @@ const NavBar = () => {
                             </div>
                             :
                             <NavLink
-                                className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg font-semibold')} to="/login">Login</NavLink>
+                                className="btn btn-active btn-primary" to="/login">Login</NavLink>
                     }
                     <Navbar.Toggle />
                 </div>
@@ -54,14 +54,18 @@ const NavBar = () => {
                         to="/AllToys">
                         All Toys
                     </NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')} to="/myToys">
-                        My Toys
-                    </NavLink>
-                    <NavLink
-                        className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')}
-                        to="/addToys">
-                        Add A Toy
-                    </NavLink>
+                    {
+                        user && <NavLink className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')} to="/myToys">
+                            My Toys
+                        </NavLink>
+                    }
+                    {
+                        user && <NavLink
+                            className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')}
+                            to="/addToys">
+                            Add A Toy
+                        </NavLink>
+                    }
                     <NavLink
                         className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg')}
                         to="/blogs">
