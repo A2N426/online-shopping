@@ -1,30 +1,45 @@
-import { Button, TextInput } from "flowbite-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { Page } from "../../CustomHook/hook";
+import { Button, TextInput } from "flowbite-react";
+import { FaAngleDoubleRight } from 'react-icons/fa';
 
 const AllToys = () => {
     const [searchText, setSearchText] = useState("");
     const [toys, setToys] = useState([])
+    const { totalToys } = useLoaderData();
+    const [currentPage, setCurrentPage] = useState(0);
+    const [toyPerPage, setToyPerPage] = useState(20);
+
+    const totalPage = Math.ceil(totalToys / toyPerPage)
+
+    const pageNumbers = [...Array(totalPage).keys()];
+    console.log(pageNumbers);
 
     Page({ title: "all toy" })
 
     useEffect(() => {
-        fetch("https://toy-house-server.vercel.app/allToys")
+        fetch(`https://toy-house-server.vercel.app/allToys?page=${currentPage}&limit=${toyPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data)
             })
-    }, [])
+    }, [currentPage, toyPerPage])
 
     const handleSearch = () => {
         fetch(`https://toy-house-server.vercel.app/getToyByText/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setToys(data);
             });
     };
+
+    const options = [5, 10, 15, 20]
+
+    const handleSelectChange = event => {
+        setToyPerPage(parseInt(event.target.value));
+        setCurrentPage(0);
+    }
 
     return (
         <div className="lg:px-24 p-6 mb-20">
@@ -43,7 +58,8 @@ const AllToys = () => {
                     </Button>
                 </div>
             </div>
-            <div className="overflow-x-auto border-2 rounded-lg">
+            <div className="overflow-x-auto
+                 rounded-lg">
 
 
                 <table className="table table-zebra w-full">
@@ -80,6 +96,33 @@ const AllToys = () => {
                         }
                     </tbody>
                 </table>
+
+                {/* pagination */}
+                <div className="w-1/6 mx-auto mt-5 flex justify-center">
+                    {
+                        pageNumbers.map(number => <button className={`border px-4 py-2 rounded-md text-lg ${number === currentPage && "bg-blue-600 text-white"}`}
+                            key={number}
+                            onClick={() => setCurrentPage(number)}
+                        >
+                            <FaAngleDoubleRight/>
+                        </button>)
+                    }
+
+                    <select
+                        value={toyPerPage}
+                        onChange={handleSelectChange}
+                        className="rounded-md"
+                    >
+                        {
+                            options.map(option => <option
+                                key={option}
+                                value={option}
+                            >
+                                {option}
+                            </option>)
+                        }
+                    </select>
+                </div>
             </div>
         </div>
     );

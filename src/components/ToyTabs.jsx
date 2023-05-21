@@ -12,7 +12,7 @@ const ToyTabs = () => {
         fetch(`https://toy-house-server.vercel.app/allToysByCategory/${active}`)
             .then(res => res.json())
             .then(data => {
-                setToys(data);
+                setToys(data)
             })
     }, [active])
 
@@ -81,7 +81,6 @@ const ToyTabs = () => {
                             }
                         </div>
                     </TabPanel>
-
                 </Tabs>
             </div>
         </div>

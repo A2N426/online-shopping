@@ -7,10 +7,10 @@ import { FaArrowLeft,FaArrowRight } from 'react-icons/fa';
 const Banner = () => {
     return (
         <div data-aos="zoom-out-down">
-            <div className="carousel w-full lg:h-[600px] h-[300px] mt-65">
+            <div className="carousel w-full lg:h-[550px] h-[300px] mt-3">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={toy4} className="w-full " />
-                    <div className="absolute  h-full flex bg-gradient-to-r from-[#290b2d] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
+                    <div className="absolute h-full flex bg-gradient-to-r from-[#290b2d] to-[rgba(31, 31, 31, 0)] lg:left-0 lg:p-28 p-5 top-0">
                         <div className='text-white lg:w-1/2'>
                             <h1 className='lg:text-6xl text-2xl font-bold '>TOY SHOP</h1>
                             <h3 className='lg:text-3xl font-mono lg:mt-1'>FOR THE HOLIDAY</h3>

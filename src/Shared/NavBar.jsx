@@ -18,12 +18,12 @@ const NavBar = () => {
             <Navbar
                 fluid={true}
                 rounded={true}
-                className="lg:px-24 px-6"
+                className="lg:px-16 px-6"
             >
                 <Navbar.Brand>
                     <img
                         src="https://img.freepik.com/free-vector/gradient-t-logo-template_23-2149371037.jpg?size=626&ext=jpg&ga=GA1.2.24677610.1673838713&semt=ais"
-                        className="mr-3 lg:w-14 lg:h-14 h-9 rounded-full"
+                        className="mr-3 lg:w-14 lg:h-14 w-10  h-10 rounded-full"
                         alt="Toy logo"
                     />
                     <span className="self-center whitespace-nowrap  text-2xl font-bold  dark:text-white bg-gradient-to-r from-blue-600 via-rose-500 to-indigo-400 inline-block text-transparent bg-clip-text">
@@ -35,7 +35,7 @@ const NavBar = () => {
                     {
                         user ?
                             <div className='relative group lg:flex'>
-                                <img className="rounded-full w-14 h-14" src={user?.photoURL} alt="Not Found" />
+                                <img className="rounded-full lg:w-14 lg:h-14 w-10 lg:mr-0 mr-3" src={user?.photoURL} alt="Not Found" />
                                 <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md top-0 right-1 absolute
                         -translate-x-14 -translate-y-4  opacity-0 m-4 mx-auto">{user?.displayName}</span>
                             </div>
