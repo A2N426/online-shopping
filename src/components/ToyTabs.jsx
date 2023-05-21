@@ -21,26 +21,25 @@ const ToyTabs = () => {
     }
     return (
         <div className='mt-16'>
-            <h1 className='text-center text-4xl font-semibold'>Shop By <span className=' text-blue-600 underline'>Sub  Category</span>  </h1>
+            <h1 className='text-center text-4xl font-semibold'>Shop By <span className=' underline'>Sub  Category</span>  </h1>
             <div className='mt-5 flex justify-center'>
                 <Tabs className="w-full ">
-                    <TabList className="flex justify-between mb-5 border-4 border-blue-600 rounded-md">
+                    <TabList className="flex justify-between mb-5 border-2 border-blue-600 rounded-md">
                         <Tab className="
                         cursor-pointer lg:px-20 p-2 py-5 
                         border
-                        focus:text-blue-600 
                         focus:font-semibold 
                         outline
                         outline-1
                         focus:outline-4
-                        outline-blue-600 focus:text-blue text-lg font-semibold focus:bg-slate-100" onClick={() => handleTabClick("sports car")} ><span className='text-blue-600'>Sports Car</span></Tab>
+                        outline-blue-600 
+                        focus:text-white lg:text-lg font-semibold focus:bg-slate-100" onClick={() => handleTabClick("sports car")} ><span className='text-blue-600'>Sports Car</span></Tab>
                         <Tab className="cursor-pointer lg:px-20 p-2 py-5 
                         border
-                        focus:font-semibold 
+                        focus:font-semibold
                         outline
                         outline-1
                         focus:outline-4
-                        text-blue-600
                         outline-blue-600 focus:text-blue text-lg font-semibold focus:bg-slate-100" onClick={() => handleTabClick("regular car")}><span className='text-blue-600'>Regular Car</span></Tab>
                         <Tab className="cursor-pointer lg:px-20 p-2 py-5 
                         border
@@ -48,7 +47,7 @@ const ToyTabs = () => {
                         outline
                         outline-1
                         focus:outline-4
-                        outline-blue-600 focus:text-blue text-lg font-semibold focus:bg-slate-100" onClick={() => handleTabClick("truck")}><span className='text-blue-600'>Super Truck</span></Tab>
+                        outline-blue-600 focus:text-blue text-lg font-semibold focus:bg-slate-100" onClick={() => handleTabClick("truck")}><span className='text-blue-600'>Super Car</span></Tab>
                     </TabList>
 
                     <TabPanel>

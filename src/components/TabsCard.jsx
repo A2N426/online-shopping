@@ -26,7 +26,7 @@ const TabsCard = ({ toy }) => {
             <div className="max-w-sm" data-aos="zoom-out-up">
 
                 <Card
-                    imgAlt="Meaningful alt text for an image that is not purely decorative"
+                    imgAlt="That is i a TOY IMAGE"
                     imgSrc={img}
                 >
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

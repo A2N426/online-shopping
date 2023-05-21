@@ -5,10 +5,10 @@ const Foot = () => {
     return (
         <Footer className="border" bgDark={true}>
             <div className="w-full">
-                <div className="grid w-full grid-cols-2 gap-8 py-8 lg:px-14 px-8 md:grid-cols-4 bg-gray-300 text-white">
+                <div className="grid w-full grid-cols-2 gap-8 py-8 lg:px-14 px-8 md:grid-cols-4 bg-gray-400">
                     <div>
                         <img className="rounded-md w-14 mb-2" src="https://img.freepik.com/free-vector/gradient-t-logo-template_23-2149371037.jpg?size=626&ext=jpg&ga=GA1.2.24677610.1673838713&semt=ais" alt="" />
-                        <Footer.LinkGroup col={true}>
+                        <Footer.LinkGroup className="text-black font-semibold" col={true}>
                             <Footer.Link href="#">
                                 About
                             </Footer.Link>
@@ -24,8 +24,8 @@ const Foot = () => {
                         </Footer.LinkGroup>
                     </div>
                     <div>
-                        <Footer.Title title="help center" />
-                        <Footer.LinkGroup col={true}>
+                        <Footer.Title  title="help center" />
+                        <Footer.LinkGroup className="text-black font-semibold" col={true}>
                             <Footer.Link href="#">
                                 Discord Server
                             </Footer.Link>
@@ -42,7 +42,7 @@ const Foot = () => {
                     </div>
                     <div>
                         <Footer.Title title="legal" />
-                        <Footer.LinkGroup col={true}>
+                        <Footer.LinkGroup className="text-black font-semibold" col={true}>
                             <Footer.Link href="#">
                                 Privacy Policy
                             </Footer.Link>
@@ -52,11 +52,14 @@ const Foot = () => {
                             <Footer.Link href="#">
                                 Terms & Conditions
                             </Footer.Link>
+                            <Footer.Link href="#">
+                                Agree with we
+                            </Footer.Link>
                         </Footer.LinkGroup>
                     </div>
                     <div>
                         <Footer.Title title="download" />
-                        <Footer.LinkGroup col={true}>
+                        <Footer.LinkGroup className="text-black font-semibold" col={true}>
                             <Footer.Link href="#">
                                 iOS
                             </Footer.Link>
