@@ -6,7 +6,7 @@ const Service = () => {
         <div>
             <h1 className="text-4xl font-bold text-center"><span>Our</span> <span className="text-red-600">Services</span></h1>
             <p className="text-center font-semibold mt-2">Online service available and offline service available from this shop.</p>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 mb-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 mb-10">
                 <div className="card bg-base-100 shadow-xl text-center">
                     <div className="card-body">
                         <FaDribbbleSquare className='text-5xl text-primary mx-auto' />

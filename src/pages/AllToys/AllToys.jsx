@@ -27,23 +27,24 @@ const AllToys = () => {
     };
 
     return (
-        <div>
-            <div className="overflow-x-auto">
-                <div className="flex justify-center mb-10">
-                    <div className="flex">
-                        <TextInput
-                            onChange={(e) => setSearchText(e.target.value)}
-                            type="text"
-                            placeholder="Search your product"
-                            required={true}
-                        />
-                        <Button
-                            onClick={handleSearch}
-                            gradientDuoTone="purpleToBlue">
-                            Search
-                        </Button>
-                    </div>
+        <div className="lg:px-24 p-6 mb-20">
+            <div className="flex justify-center mb-10">
+                <div className="flex">
+                    <TextInput
+                        onChange={(e) => setSearchText(e.target.value)}
+                        type="text"
+                        placeholder="Search your product"
+                        required={true}
+                    />
+                    <Button
+                        onClick={handleSearch}
+                        gradientDuoTone="purpleToBlue">
+                        Search
+                    </Button>
                 </div>
+            </div>
+            <div className="overflow-x-auto border-2 rounded-lg">
+
 
                 <table className="table table-zebra w-full">
                     {/* head*/}

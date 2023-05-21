@@ -20,11 +20,11 @@ const ToyTabs = () => {
         setActive(tabName)
     }
     return (
-        <div>
-            <h1 className='text-center text-4xl font-semibold'>Shop By Category</h1>
-            <div className='mt-20 mb-20 flex justify-center'>
-                <Tabs className="w-full">
-                    <TabList className="flex justify-between mb-10 border-4 border-blue-600 rounded-md">
+        <div className='mt-16'>
+            <h1 className='text-center text-4xl font-semibold'>Shop By <span className=' text-blue-600 underline'>Sub  Category</span>  </h1>
+            <div className='mt-5 flex justify-center'>
+                <Tabs className="w-full ">
+                    <TabList className="flex justify-between mb-5 border-4 border-blue-600 rounded-md">
                         <Tab className="
                         cursor-pointer lg:px-20 p-2 py-5 
                         border

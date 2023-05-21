@@ -9,8 +9,8 @@ const ViewDetails = () => {
     Page({title:"view details"})
 
     return (
-        <div>
-            <div className="card font-thin lg:card-side bg-base-100 shadow-2xl lg:p-5">
+        <div className="lg:px-24 ">
+            <div className="card mt-10 mb-20 font-thin lg:card-side bg-base-100 shadow-2xl lg:p-5">
                 <figure data-aos="zoom-in-right" className="lg:w-1/2"><img className="rounded-lg" src={img} alt="Album" /></figure>
                 <div data-aos="zoom-in-left" className="card-body lg:w-1/2">
                     <h2 className="text-3xl font-semibold">{name}</h2>

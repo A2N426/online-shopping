@@ -1,21 +1,32 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Page } from "../../CustomHook/hook";
 
 const MyToys = () => {
     const { user } = useContext(UserContext)
     const [myToys, setMyToys] = useState([]);
     Page({ title: "my toy" })
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        fetch(`https://toy-house-server.vercel.app/myToys/${user?.email}`)
-            .then(res => res.json())
-            .then(data => {
+    useEffect(()=>{
+        fetch(`https://toy-house-server.vercel.app/myToys/${user?.email}`,{
+            method:"GET",
+            headers:{
+                authorization:`Bearer ${localStorage.getItem("toy-house-token")}`
+            }
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(!data.error){
                 setMyToys(data)
-            })
-    }, [user])
+            }
+            else{
+                navigate("/")
+            }
+        })
+    },[user,navigate])
 
     const handleDelete = id => {
         Swal.fire({
@@ -63,8 +74,10 @@ const MyToys = () => {
     }
 
     return (
-        <div>
-            <div className="flex gap-5 justify-end mt-5 mb-5">
+        <div className="lg:px-24 p-6 mb-20">
+            <h2 className="text-4xl font-bold text-center">All is all our <span className="text-blue-700 underline cursor-pointer">TOY</span> Here</h2>
+            <div className="flex gap-5 items-center justify-between mt-5 mb-5">
+                
                 <button className="btn btn-sm btn-outline btn-info" onClick={handleSortAscending}>
                     Sort By ascending
                 </button>
@@ -72,7 +85,7 @@ const MyToys = () => {
                     Sort By descending
                 </button>
             </div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto border-2 rounded-lg">
                 <table className="table table-zebra  w-full">
                     {/* head*/}
                     <thead>

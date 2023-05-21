@@ -18,7 +18,7 @@ const NavBar = () => {
             <Navbar
                 fluid={true}
                 rounded={true}
-                
+                className="lg:px-24 px-6"
             >
                 <Navbar.Brand>
                     <img
@@ -35,13 +35,13 @@ const NavBar = () => {
                     {
                         user ?
                             <div className='relative group lg:flex'>
-                                <img className="rounded-full w-14" src={user?.photoURL} alt="Not Found" />
+                                <img className="rounded-full w-14 h-14" src={user?.photoURL} alt="Not Found" />
                                 <span className="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md top-0 right-1 absolute
                         -translate-x-14 -translate-y-4  opacity-0 m-4 mx-auto">{user?.displayName}</span>
                             </div>
                             :
                             <NavLink
-                                className="font-semibold text-lg" to="/login">Login</NavLink>
+                                className={({ isActive }) => (isActive ? 'text-blue-600 normal-case font-bold tracking-wide transition-colors duration-200 text-md text-lg' : 'hover:text-blue-700 text-lg font-semibold')} to="/login">Login</NavLink>
                     }
                     <Navbar.Toggle />
                 </div>

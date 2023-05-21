@@ -8,7 +8,7 @@ import Trending from "../../components/Trending";
 const Home = () => {
     Page({ title: "Home" })
     return (
-        <div>
+        <div >
             <Banner></Banner>
             <div className="lg:px-24 p-6">
                 <Gallery></Gallery>

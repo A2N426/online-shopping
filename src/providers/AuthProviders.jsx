@@ -41,6 +41,25 @@ const AuthProviders = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user)
+            if(user && user.email){
+                const email = {
+                    email: user.email
+                }
+                fetch("https://toy-house-server.vercel.app/token",{
+                    method:"POST",
+                    headers:{
+                        "Content-type":"application/json"
+                    },
+                    body:JSON.stringify(email)
+                })
+                .then(res=>res.json())
+                .then(data=>{
+                    localStorage.setItem("toy-house-token",data.token)
+                })
+            }
+            else{
+                localStorage.removeItem("toy-house-token")
+            }
             setLoading(false)
         })
         return () => {

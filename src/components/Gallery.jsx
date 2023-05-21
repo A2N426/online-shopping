@@ -2,7 +2,7 @@
 
 const Gallery = () => {
     return (
-        <div className="mt-20 mb-20">
+        <div className="lg:mt-14 mt-5 mb-10">
             <h2 className="text-4xl text-center font-semibold">Gallery With Toy Car</h2>
             <div className="">
 
@@ -29,32 +29,32 @@ const Gallery = () => {
                     <div className="shadow-xl rounded-2xl" data-aos="zoom-in-down">
                         <img className="h-auto max-w-full rounded-lg" src="https://images.freeimages.com/images/previews/d50/racing-car-model-1413571.jpg" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="flip-down">
+                    <div className=" rounded-2xl" data-aos="flip-down">
                         <img className="h-auto max-w-full rounded-lg" src="https://images.pexels.com/photos/35619/capri-ford-oldtimer-automotive.jpg?auto=compress&cs=tinysrgb&w=600" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="flip-left">
+                    <div className=" rounded-2xl" data-aos="flip-left">
                         <img className="h-auto max-w-full rounded-lg" src="https://images.freeimages.com/images/previews/0c7/vehicle-1156020.jpg" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="zoom-in-down">
+                    <div className=" rounded-2xl" data-aos="zoom-in-down">
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1150095816/es/foto/macro-imagen-de-coche-de-juguete-vintage.jpg?s=612x612&w=0&k=20&c=98t3wD5wZ6pL5r-JBO8zwhFe8yoPkeJn05QKpfvW5L0=" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="flip-right">
+                    <div className=" rounded-2xl" data-aos="flip-right">
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1363606790/es/foto/coche-de-pl%C3%A1stico-de-juguete-feliz-para-ni%C3%B1os-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=v_r79SxTXIycgUwc8QaaPU6WeajBlqUC-t1I_Brs7yI=" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="fade-right">
+                    <div className=" rounded-2xl" data-aos="fade-right">
                         <img className="h-auto max-w-full rounded-lg" src="https://images.freeimages.com/images/previews/6c6/toy-car-1413903.jpg" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="zoom-in-down">
+                    <div className=" rounded-2xl" data-aos="zoom-in-down">
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/526534571/photo/yellow-fifties-toy-model-car.jpg?b=1&s=612x612&w=0&k=20&c=uki8khthtBs_h7OdsIjHZN3XjQpbMBmq6wAH6GL9B2g=" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="fade-left">
-                        <img className="h-auto shadow-xl max-w-full rounded-lg" src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dG95JTIwY2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="" />
+                    <div className=" rounded-2xl" data-aos="fade-left">
+                        <img className="h-auto  max-w-full rounded-lg" src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dG95JTIwY2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="fade-left">
-                        <img className="h-auto shadow-xl max-w-full rounded-lg" src="https://img.freepik.com/premium-photo/toys-collection-isolated-white-background_635416-2394.jpg?size=626&ext=jpg&ga=GA1.2.24677610.1673838713&semt=ais" alt="" />
+                    <div className=" rounded-2xl" data-aos="fade-left">
+                        <img className="h-auto  max-w-full rounded-lg" src="https://img.freepik.com/premium-photo/toys-collection-isolated-white-background_635416-2394.jpg?size=626&ext=jpg&ga=GA1.2.24677610.1673838713&semt=ais" alt="" />
                     </div>
-                    <div className="shadow-xl rounded-2xl" data-aos="fade-left">
-                        <img className="h-auto shadow-xl max-w-full rounded-lg" src="https://images.freeimages.com/images/previews/d50/racing-car-model-1413571.jpg" alt="" />
+                    <div className=" rounded-2xl" data-aos="fade-left">
+                        <img className="h-auto  max-w-full rounded-lg" src="https://images.freeimages.com/images/previews/d50/racing-car-model-1413571.jpg" alt="" />
                     </div>
                 </div>
 

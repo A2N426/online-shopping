@@ -37,7 +37,6 @@ const AddToys = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.acknowledged) {
                     Swal.fire({
                         title: 'Success!',
@@ -80,7 +79,7 @@ const AddToys = () => {
 
 
     return (
-        <div className="lg:px-24 px-6">
+        <div className="lg:px-24 px-6 mt-10">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div>
@@ -216,7 +215,7 @@ const AddToys = () => {
                         rows={4}
                     />
                 </div>
-                <Button className="mx-auto w-1/3 py-2" gradientDuoTone="purpleToBlue" type="submit">
+                <Button className="mx-auto mb-20 w-1/3 py-2" gradientDuoTone="purpleToBlue" type="submit">
                     Add Toy
                 </Button>
             </form>

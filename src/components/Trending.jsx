@@ -2,9 +2,9 @@ import { Carousel } from "flowbite-react";
 
 const Trending = () => {
     return (
-        <div className="mt-20 mb-20">
+        <div className="lg:mt-20 mt-10 lg:mb-20 mb-10">
             <h1 className="text-4xl font-bold text-center">Trending Toys</h1>
-            <p className="text-center font-semibold te mt-2">Here are world wide <span className="text-red-600 underline"> trending product</span> </p>
+            <p className="text-center font-semibold te mt-2">Here are world wide <small className="text-blue-600 underline"> trending product</small> </p>
             <div>
                 <div className="grid lg:grid-cols-2 gap-4 h-96  mt-10">
                     <div data-aos="zoom-in-right">
