@@ -75,13 +75,13 @@ const MyToys = () => {
 
     return (
         <div className="lg:px-24 p-6 mb-20">
-            <h2 className="text-4xl font-bold text-center">All is all our <span className="text-blue-700 underline cursor-pointer">TOY</span> Here</h2>
+            <h2 className="text-4xl font-bold text-center">All is all our <span className=" underline cursor-pointer bg-gradient-to-r from-blue-600 via-rose-500 to-indigo-400 inline-block text-transparent bg-clip-text">TOY HERE</span></h2>
             <div className="flex gap-5 items-center justify-between mt-5 mb-5">
                 
-                <button className="btn btn-sm btn-outline btn-info" onClick={handleSortAscending}>
+                <button className="btn btn-sm  btn-primary" onClick={handleSortAscending}>
                     Sort By ascending
                 </button>
-                <button className="btn btn-sm btn-outline btn-info" onClick={handleSortDescending}>
+                <button className="btn btn-sm btn-primary" onClick={handleSortDescending}>
                     Sort By descending
                 </button>
             </div>

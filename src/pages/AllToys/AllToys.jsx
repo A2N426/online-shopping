@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { Page } from "../../CustomHook/hook";
 import { Button, TextInput } from "flowbite-react";
 import { FaAngleDoubleRight } from 'react-icons/fa';
+import Marque from "../../components/Marque";
 
 const AllToys = () => {
     const [searchText, setSearchText] = useState("");
@@ -43,7 +44,8 @@ const AllToys = () => {
 
     return (
         <div className="lg:px-24 p-6 mb-20">
-            <div className="flex justify-center mb-10">
+            <Marque></Marque>
+            <div className="flex mt-10 justify-center mb-10">
                 <div className="flex">
                     <TextInput
                         onChange={(e) => setSearchText(e.target.value)}
